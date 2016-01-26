@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/Scripts/Common")
+</head>
+<body>
+
+    <div id="header">
+        <a href="/Fundamentals/ViewFundamentals">Fundamentals</a>
+        <a href="#">coming soon</a>
+
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
