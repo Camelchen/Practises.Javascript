@@ -1,4 +1,4 @@
-﻿ShowHeader(0);
+﻿ShowHeader();
 
 var epsilon = 0.00000000001;
 
@@ -41,7 +41,24 @@ var sideB = 5;
 var sideC = Math.sqrt(50.001);
 var result = checkTriplet(sideA, sideB, sideC);
 
-//output    
 console.log("The result of triplet check is: "+result);
+
+//default parameters
+var val = 20;
+function f(x, y, z) {
+    if (y===undefined) {
+        y=10;    
+    }
+    if (z===undefined) {
+        z=val;
+    }
+    return x + y + z;
+}
+
+    document.write("default 2 parameter: "+f(1));
+    document.writeln("<br>");
+    document.write("default 1 parameter: "+f(1,2));
+    document.writeln("<br>");
+    document.write("default 0 parameter: "+f(1,2,3));
 
 ShowTailer()

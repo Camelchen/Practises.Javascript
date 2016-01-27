@@ -139,6 +139,7 @@
     <Content Include="Scripts\Fundamentals\ControllingProgramFlow.js" />
     <Content Include="Scripts\Fundamentals\DataType.js" />
     <Content Include="Scripts\Fundamentals\Functions.js" />
+    <Content Include="Scripts\Fundamentals\ObjectsAndArrays.js" />
     <Content Include="Scripts\Fundamentals\Operators.js" />
     <Content Include="Scripts\Fundamentals\Variables.js" />
     <Content Include="Scripts\Fundamentals\WritingJavaScriptCode.js" />
