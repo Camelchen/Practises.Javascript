@@ -41,7 +41,7 @@ var sideB = 5;
 var sideC = Math.sqrt(50.001);
 var result = checkTriplet(sideA, sideB, sideC);
 
-console.log("The result of triplet check is: "+result);
+document.write("The result of triplet check is: " + result);
 
 //default parameters
 var val = 20;
