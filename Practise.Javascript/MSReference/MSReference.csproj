@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\AdvancedController.cs" />
     <Compile Include="Controllers\FundamentalsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,8 +134,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Themes\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\Advanced\Arrays.js" />
+    <Content Include="Scripts\Advanced\Constructors.js" />
+    <Content Include="Scripts\Advanced\Prototype.js" />
+    <Content Include="Scripts\Advanced\Recursion.js" />
+    <Content Include="Scripts\Advanced\VariableScope.js" />
     <Content Include="Scripts\Common\Common.js" />
     <Content Include="Scripts\Fundamentals\ControllingProgramFlow.js" />
     <Content Include="Scripts\Fundamentals\DataType.js" />
@@ -162,6 +169,7 @@
     <Content Include="Scripts\jquery-2.2.0.min.map" />
     <Content Include="Views\Fundamentals\ViewFundamentals.cshtml" />
     <Content Include="Views\Shared\Site_LayoutPage.cshtml" />
+    <Content Include="Views\Advanced\ViewAdvanced.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

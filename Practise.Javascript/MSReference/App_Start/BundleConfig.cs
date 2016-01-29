@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace Fundamentals
+namespace MSReference
 {
     public class BundleConfig
     {
@@ -13,9 +13,17 @@ namespace Fundamentals
             bundles.Add(new ScriptBundle("~/Scripts/Common").Include(
                 "~/Scripts/Common/*.js")
                 );
-            bundles.Add(new ScriptBundle("~/Scripts/Fundamentals")
-                .Include("~/Scripts/Fundamentals/*.js")
+            bundles.Add(new ScriptBundle("~/Scripts/Fundamentals").Include(
+                "~/Scripts/Fundamentals/*.js")
                 );
+            bundles.Add(new ScriptBundle("~/Scripts/Advanced").Include(
+                "~/Scripts/Advanced/*.js")
+                );
+
+            bundles.Add(new StyleBundle("~/Content/Themes").Include(
+                "~/Content/Themes/bootstrap.min.css")
+                );
+
         }
     }
 }

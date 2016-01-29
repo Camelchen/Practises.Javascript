@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Scripts.Render("~/Scripts/Common")
+    @Styles.Render("~/Content/Themes")
+
 </head>
 <body>
 
-    <div id="header">
-        <a href="/Fundamentals/ViewFundamentals">Fundamentals</a>
-        <a href="#">coming soon</a>
+<div id="header">
 
+
+    <div class="list-group">
+        <a href="/Advanced/ViewAdvanced" class="list-group-item">Advanced</a>
+        <a href="/Fundamentals/ViewFundamentals" class="list-group-item">Fundamentals</a>
+        <a href="#" class="list-group-item">Coming Soon...</a>
     </div>
+
+</div>
 
     <div>
         @RenderBody()

@@ -20,3 +20,12 @@
 function ShowTailer() {
     document.write("<br/>");
 }
+
+function ShowOutput(outputString) {
+
+    if (outputString == undefined) {
+        outputString = "";
+    }
+    document.write(outputString);
+    document.write("<br/>");
+}

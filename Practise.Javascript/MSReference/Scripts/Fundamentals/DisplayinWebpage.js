@@ -1,4 +1,4 @@
-﻿ShowHeader(0);
+﻿ShowHeader();
 
 
 var textDiv = document.getElementById("textDiv");
@@ -19,26 +19,6 @@ function showTime(st) {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
