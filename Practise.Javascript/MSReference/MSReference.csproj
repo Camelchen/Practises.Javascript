@@ -138,9 +138,13 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\Advanced\Arrays.js" />
+    <Content Include="Scripts\Advanced\Bind.js" />
+    <Content Include="Scripts\Advanced\Collections.js" />
     <Content Include="Scripts\Advanced\Constructors.js" />
     <Content Include="Scripts\Advanced\Prototype.js" />
     <Content Include="Scripts\Advanced\Recursion.js" />
+    <Content Include="Scripts\Advanced\SpecialCharacters.js" />
+    <Content Include="Scripts\Advanced\TemplateStrings.js" />
     <Content Include="Scripts\Advanced\VariableScope.js" />
     <Content Include="Scripts\Common\Common.js" />
     <Content Include="Scripts\Fundamentals\ControllingProgramFlow.js" />
