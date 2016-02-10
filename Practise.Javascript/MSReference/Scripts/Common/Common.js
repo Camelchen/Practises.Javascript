@@ -21,11 +21,16 @@ function ShowTailer() {
     document.write("<br/>");
 }
 
-function ShowOutput(outputString) {
+
+function ShowOutput(outputString,sameLine) {
 
     if (outputString == undefined) {
         outputString = "";
     }
     document.write(outputString);
-    document.write("<br/>");
+    if (sameLine == undefined) {
+        document.write("<br/>");
+    } else {
+        document.write(", ");
+    }
 }
