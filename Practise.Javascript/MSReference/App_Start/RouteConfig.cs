@@ -16,7 +16,7 @@ namespace MSReference
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Advanced", action = "ViewAdvanced", id = UrlParameter.Optional }
+                defaults: new { controller = "Debug", action = "ViewDebug", id = UrlParameter.Optional }
             );
         }
     }

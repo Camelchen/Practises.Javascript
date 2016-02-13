@@ -130,6 +130,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\AdvancedController.cs" />
+    <Compile Include="Controllers\DebugController.cs" />
     <Compile Include="Controllers\FundamentalsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,6 +181,7 @@
     <Content Include="Views\Fundamentals\ViewFundamentals.cshtml" />
     <Content Include="Views\Shared\Site_LayoutPage.cshtml" />
     <Content Include="Views\Advanced\ViewAdvanced.cshtml" />
+    <Content Include="Views\Debug\ViewDebug.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
