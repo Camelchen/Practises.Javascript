@@ -1,5 +1,5 @@
 ﻿///<reference path="~/Scripts/Common/Common.js" />
-ShowHeader(0);
+ShowHeader();
 
 var data;
 

@@ -22,7 +22,6 @@ function partOfDay() {
     }
 }
 
-
 //build URL
 
 function buildURL(strArray,...valArray) {

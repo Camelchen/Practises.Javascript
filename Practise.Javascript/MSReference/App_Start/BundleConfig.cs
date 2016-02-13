@@ -18,14 +18,11 @@ namespace MSReference
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/Scripts/Common").Include(
-                "~/Scripts/Common/*.js")
-                );
+            bundles.Add(new ScriptBundle("~/Scripts/Debug").Include("~/Scripts/_debug.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/Common").Include("~/Scripts/Common/*.js"));
 
             var bdFundamentals = new ScriptBundle("~/Scripts/Fundamentals").Include(
                 "~/Scripts/Fundamentals/*.js");
-
-
             bundles.Add(bdFundamentals);
 
 
@@ -37,8 +34,6 @@ namespace MSReference
             bundles.Add(new StyleBundle("~/Content/Themes").Include(
                 "~/Content/Themes/bootstrap.min.css")
                 );
-
-           
 
         }
     }
