@@ -32,8 +32,9 @@ namespace MSReference
             bundles.Add(bdAdvanced);
 
             bundles.Add(new StyleBundle("~/Content/Themes").Include(
-                "~/Content/Themes/bootstrap.min.css")
+                "~/Content/Themes/*.css")
                 );
+
 
         }
     }
