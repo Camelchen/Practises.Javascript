@@ -10,9 +10,15 @@ var text = '{"name":"John","street":"montreal","phone":"514 1234567"}';
 var obj = JSON.parse(text);
 console.dir(obj);
 
+<<<<<<< Updated upstream
 document.getElementById("demo").innerHTML += "&nbsp &nbsp &nbsp" + obj.name + ", " + obj.street + ", " + obj.phone;
 
 //bind
+=======
+document.getElementById('demo').innerHTML = obj.name + "," + obj.street + "," + obj.phone;
+
+//Bind
+>>>>>>> Stashed changes
 var data;
 
 function DataObject() {
@@ -21,6 +27,10 @@ function DataObject() {
         return data;
     }
     this.onDataCompleted = dataReadyHandler;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }
 
 function dataReadyHandler() {
@@ -30,4 +40,8 @@ function dataReadyHandler() {
     }
 }
 
+<<<<<<< Updated upstream
 var data = new DataObject();
+=======
+var dataObj = new DataObject();
+>>>>>>> Stashed changes
