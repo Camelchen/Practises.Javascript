@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -141,7 +142,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Themes\bootstrap.css" />
     <Content Include="Content\Themes\bootstrap.min.css" />
+    <Content Include="Content\Themes\simple-sidebar.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\Advanced\Arrays.js" />
@@ -153,7 +156,10 @@
     <Content Include="Scripts\Advanced\SpecialCharacters.js" />
     <Content Include="Scripts\Advanced\TemplateStrings.js" />
     <Content Include="Scripts\Advanced\VariableScope.js" />
+    <Content Include="Scripts\Common\bootstrap.js" />
+    <Content Include="Scripts\Common\bootstrap.min.js" />
     <Content Include="Scripts\Common\Common.js" />
+    <Content Include="Scripts\Common\jquery.js" />
     <Content Include="Scripts\Fundamentals\ControllingProgramFlow.js" />
     <Content Include="Scripts\Fundamentals\DataType.js" />
     <Content Include="Scripts\Fundamentals\DatesAndTimes.js" />
