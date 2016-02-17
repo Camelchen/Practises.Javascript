@@ -151,6 +151,8 @@
     <Content Include="Scripts\Advanced\Bind.js" />
     <Content Include="Scripts\Advanced\Collections.js" />
     <Content Include="Scripts\Advanced\Constructors.js" />
+    <Content Include="Scripts\Advanced\EventListeners.js" />
+    <Content Include="Scripts\Advanced\JSON.js" />
     <Content Include="Scripts\Advanced\Prototype.js" />
     <Content Include="Scripts\Advanced\Recursion.js" />
     <Content Include="Scripts\Advanced\SpecialCharacters.js" />
