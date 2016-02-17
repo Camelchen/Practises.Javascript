@@ -137,6 +137,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\JSONController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -152,7 +153,8 @@
     <Content Include="Scripts\Advanced\Collections.js" />
     <Content Include="Scripts\Advanced\Constructors.js" />
     <Content Include="Scripts\Advanced\EventListeners.js" />
-    <Content Include="Scripts\Advanced\JSON.js" />
+    <Content Include="Scripts\JSON\HTTP.js" />
+    <Content Include="Scripts\JSON\Intro.js" />
     <Content Include="Scripts\Advanced\Prototype.js" />
     <Content Include="Scripts\Advanced\Recursion.js" />
     <Content Include="Scripts\Advanced\SpecialCharacters.js" />
@@ -174,6 +176,7 @@
     <Content Include="Scripts\Fundamentals\WritingJavaScriptCode.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\JSON\Syntax.js" />
     <Content Include="Scripts\_debug.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -190,6 +193,7 @@
     <Content Include="Views\Shared\Site_LayoutPage.cshtml" />
     <Content Include="Views\Advanced\ViewAdvanced.cshtml" />
     <Content Include="Views\Debug\ViewDebug.cshtml" />
+    <Content Include="Views\JSON\ViewJSON.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

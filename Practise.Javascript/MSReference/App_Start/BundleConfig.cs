@@ -28,8 +28,11 @@ namespace MSReference
 
             var bdAdvanced = new ScriptBundle("~/Scripts/Advanced").Include(
                 "~/Scripts/Advanced/*.js");
-            bdFundamentals.Orderer = new BundleOrdererByCreateTime();
             bundles.Add(bdAdvanced);
+
+            var bdJSON = new ScriptBundle("~/Scripts/JSON").Include(
+                "~/Scripts/JSON/*.js");
+            bundles.Add(bdJSON);
 
             bundles.Add(new StyleBundle("~/Content/Themes").Include(
                 "~/Content/Themes/*.css")
