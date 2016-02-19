@@ -8,7 +8,6 @@ ShowHeader();
 var text = '{"name":"John","street":"montreal","phone":"514 1234567"}';
 
 var obj = JSON.parse(text);
-console.dir(obj);
 
 
 ShowOutput("&nbsp &nbsp &nbsp" + obj.name + ", " + obj.street + ", " + obj.phone);

@@ -143,8 +143,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Resources\JSON.myTutorials.txt" />
     <Content Include="Content\Themes\bootstrap.css" />
     <Content Include="Content\Themes\bootstrap.min.css" />
+    <Content Include="Content\Themes\JSON.Sample.css" />
     <Content Include="Content\Themes\simple-sidebar.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
@@ -153,6 +155,7 @@
     <Content Include="Scripts\Advanced\Collections.js" />
     <Content Include="Scripts\Advanced\Constructors.js" />
     <Content Include="Scripts\Advanced\EventListeners.js" />
+    <Content Include="Scripts\JSON\Example.js" />
     <Content Include="Scripts\JSON\HTTP.js" />
     <Content Include="Scripts\JSON\Intro.js" />
     <Content Include="Scripts\Advanced\Prototype.js" />
