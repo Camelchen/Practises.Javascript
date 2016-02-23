@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CEFDD37F-118A-4369-BDF5-CAC0411A18B6}</ProjectGuid>
+    <ProjectGuid>{6F090968-299D-428B-B623-C87B1E61F20F}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MSReference</RootNamespace>
-    <AssemblyName>MSReference</AssemblyName>
+    <RootNamespace>W3Schools</RootNamespace>
+    <AssemblyName>W3Schools</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -21,7 +21,6 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
-    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,12 +42,6 @@
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -130,9 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\AdvancedController.cs" />
-    <Compile Include="Controllers\DebugController.cs" />
-    <Compile Include="Controllers\FundamentalsController.cs" />
+    <Compile Include="Controllers\JSONController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,37 +139,15 @@
     <Content Include="Content\Themes\JSON.Sample.css" />
     <Content Include="Content\Themes\simple-sidebar.css" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
-    <Content Include="Scripts\Advanced\Arrays.js" />
-    <Content Include="Scripts\Advanced\Bind.js" />
-    <Content Include="Scripts\Advanced\Collections.js" />
-    <Content Include="Scripts\Advanced\Constructors.js" />
-    <Content Include="Scripts\Advanced\EventListeners.js" />
-    <Content Include="Scripts\Advanced\Prototype.js" />
-    <Content Include="Scripts\Advanced\Recursion.js" />
-    <Content Include="Scripts\Advanced\SpecialCharacters.js" />
-    <Content Include="Scripts\Advanced\TemplateStrings.js" />
-    <Content Include="Scripts\Advanced\VariableScope.js" />
     <Content Include="Scripts\Common\bootstrap.js" />
     <Content Include="Scripts\Common\bootstrap.min.js" />
     <Content Include="Scripts\Common\Common.js" />
     <Content Include="Scripts\Common\jquery.js" />
-    <Content Include="Scripts\Fundamentals\ControllingProgramFlow.js" />
-    <Content Include="Scripts\Fundamentals\DataType.js" />
-    <Content Include="Scripts\Fundamentals\DatesAndTimes.js" />
-    <Content Include="Scripts\Fundamentals\DisplayinWebpage.js" />
-    <Content Include="Scripts\Fundamentals\Functions.js" />
-    <Content Include="Scripts\Fundamentals\IntrinsicObjects.js" />
-    <Content Include="Scripts\Fundamentals\ObjectsAndArrays.js" />
-    <Content Include="Scripts\Fundamentals\Operators.js" />
-    <Content Include="Scripts\Fundamentals\Variables.js" />
-    <Content Include="Scripts\Fundamentals\WritingJavaScriptCode.js" />
-    <Content Include="Scripts\jquery-2.2.0.js" />
-    <Content Include="Scripts\jquery-2.2.0.min.js" />
-    <Content Include="Scripts\_debug.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Scripts\JSON\Example.js" />
+    <Content Include="Scripts\JSON\HTTP.js" />
+    <Content Include="Scripts\JSON\Intro.js" />
+    <Content Include="Scripts\JSON\Syntax.js" />
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -186,11 +155,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Scripts\jquery-2.2.0.min.map" />
-    <Content Include="Views\Fundamentals\ViewFundamentals.cshtml" />
-    <Content Include="Views\Shared\Site_LayoutPage.cshtml" />
-    <Content Include="Views\Advanced\ViewAdvanced.cshtml" />
-    <Content Include="Views\Debug\ViewDebug.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -198,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\JSON\ViewJSON.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site_LayoutPage.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -215,9 +185,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58959</DevelopmentServerPort>
+          <DevelopmentServerPort>53818</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58959/</IISUrl>
+          <IISUrl>http://localhost:53818/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

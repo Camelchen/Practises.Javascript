@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace MSReference
+namespace W3Schools
 {    
     class BundleOrdererByCreateTime : IBundleOrderer
     {
@@ -18,16 +18,12 @@ namespace MSReference
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/Scripts/Debug").Include("~/Scripts/_debug.js"));
+
             bundles.Add(new ScriptBundle("~/Scripts/Common").Include("~/Scripts/Common/*.js"));
 
-            var bdFundamentals = new ScriptBundle("~/Scripts/Fundamentals").Include(
-                "~/Scripts/Fundamentals/*.js");
-            bundles.Add(bdFundamentals);
-
-            var bdAdvanced = new ScriptBundle("~/Scripts/Advanced").Include(
-                "~/Scripts/Advanced/*.js");
-            bundles.Add(bdAdvanced);
+            var bdJSON = new ScriptBundle("~/Scripts/JSON").Include(
+                "~/Scripts/JSON/*.js");
+            bundles.Add(bdJSON);
 
             bundles.Add(new StyleBundle("~/Content/Themes").Include(
                 "~/Content/Themes/*.css")

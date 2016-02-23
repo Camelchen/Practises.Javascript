@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MSReference.Scripts
+namespace W3Schools.Controllers
 {
-    public class JSONController : Controller
+    public class JSONController : System.Web.Mvc.Controller
     {
         //
         // GET: /JSON/
