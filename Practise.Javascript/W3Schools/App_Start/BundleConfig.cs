@@ -25,6 +25,10 @@ namespace W3Schools
                 "~/Scripts/JSON/*.js");
             bundles.Add(bdJSON);
 
+            var bdAJAX = new ScriptBundle("~/Scripts/AJAX").Include(
+                "~/Scripts/AJAX/*.js");
+            bundles.Add(bdAJAX);
+
             bundles.Add(new StyleBundle("~/Content/Themes").Include(
                 "~/Content/Themes/*.css")
                 );

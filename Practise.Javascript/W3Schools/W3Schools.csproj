@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\AJAXController.cs" />
     <Compile Include="Controllers\JSONController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,12 +135,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Resources\AJAX.ajax_info.txt" />
     <Content Include="Content\Resources\JSON.myTutorials.txt" />
     <Content Include="Content\Themes\bootstrap.css" />
     <Content Include="Content\Themes\bootstrap.min.css" />
     <Content Include="Content\Themes\JSON.Sample.css" />
     <Content Include="Content\Themes\simple-sidebar.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\AJAX\HOME.js" />
     <Content Include="Scripts\Common\bootstrap.js" />
     <Content Include="Scripts\Common\bootstrap.min.js" />
     <Content Include="Scripts\Common\Common.js" />
@@ -168,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Site_LayoutPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AJAX\ViewAJAX.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
