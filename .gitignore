@@ -220,3 +220,4 @@ _ReSharper.*
 */bin/*
 */debug/*
 
+*.orig

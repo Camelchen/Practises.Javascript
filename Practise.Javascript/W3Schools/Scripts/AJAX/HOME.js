@@ -24,16 +24,3 @@ function loadJSONDoc() {
     xhttp.open("GET", "/JSON/ViewJSON", true);
     xhttp.send();
 }
-
-function loadXMLDoc() {
-    var xhttp, xmlDoc, txt, x, i;
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState==4 && xhttp.status==200) {
-            xmlDoc = xhttp.responseXML;
-            txt = "";
-
-        }
-
-    }
-}
