@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "ViewAJAX";
+    Layout = "~/Views/Shared/Site_LayoutPage.cshtml";
+}
+
+<h2>ViewAJAX</h2>
+
+
+@Scripts.Render("~/Scripts/AJAX")
+
+
+<div id="HOME-demo">Let AJAX change this text</div>
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+<div id="HOME-demo-JSON">Let (JSON) AJAX change this text</div>
+<button type="button" onclick="loadJSONDoc()">Change Content(JSON)</button>
