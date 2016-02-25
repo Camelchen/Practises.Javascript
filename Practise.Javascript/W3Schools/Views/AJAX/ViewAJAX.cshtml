@@ -7,11 +7,12 @@
 
 
 @Scripts.Render("~/Scripts/AJAX")
+@Scripts.Render("~/Scripts/JQuery")
 
 
 <div id="HOME-demo">Let AJAX change this text</div>
 <button type="button" onclick="loadDoc()">Change Content</button>
-<br/>
+<br />
 
 <div id="HOME-demo-JSON">Let (JSON) AJAX change this text</div>
 <button type="button" onclick="loadJSONDoc()">Change Content(JSON)</button>
@@ -19,3 +20,29 @@
 
 <div id="HOME-demo-XML">My CD Collection:</div>
 <button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+<br />
+
+<div id="HOME-demo-Switch">AJAX Switch change this text</div>
+<button type="button" onclick="SwitchDoc('AJAX.switch1.txt', SwitchShow)">AJAX.Switch1</button>
+<button type="button" onclick="SwitchDoc('AJAX.switch2.txt', SwitchShow)">AJAX.Switch2</button>
+<br />
+
+<style>
+    .search-highlight {
+        font-weight: bold;
+        color: green;
+    }
+</style>
+
+
+<p>Search Stored procedure</p>
+SP Name: <input id="search-box" onkeyup="showHint(this.value)"/>
+
+<p id="search-result"></p>
+
+<select id="sp-select-list" name="customers" onchange="showSP()">
+    <option value="">Contains:</option>
+</select>
+
+<p id="SP-Content"></p>
+<br />

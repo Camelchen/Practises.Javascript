@@ -135,7 +135,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Resources\AJAX.switch2.txt" />
+    <Content Include="Content\Resources\AJAX.switch1.txt" />
     <Content Include="Content\Resources\AJAX.ajax_info.txt" />
+    <Content Include="Content\Resources\AJAX.cd_catalog.xml" />
     <Content Include="Content\Resources\JSON.myTutorials.txt" />
     <Content Include="Content\Themes\bootstrap.css" />
     <Content Include="Content\Themes\bootstrap.min.css" />
@@ -151,6 +154,7 @@
     <Content Include="Scripts\JSON\HTTP.js" />
     <Content Include="Scripts\JSON\Intro.js" />
     <Content Include="Scripts\JSON\Syntax.js" />
+    <Content Include="Views\AJAX\GetHint.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

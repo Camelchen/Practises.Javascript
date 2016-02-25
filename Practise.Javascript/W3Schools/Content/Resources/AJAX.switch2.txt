@@ -1,0 +1,1 @@
+<p>Here is AJAX switch 2</p>
