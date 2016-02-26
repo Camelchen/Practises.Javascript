@@ -9,7 +9,7 @@ function loadDoc() {
             document.getElementById("HOME-demo").innerHTML = xhttp.responseText;
         }
     };
-    xhttp.open("GET", "Content/Resources/AJAX.ajax_info.txt", true);
+    xhttp.open("GET", "../Content/Resources/AJAX.ajax_info.txt", true);
     xhttp.send();
 }
 
@@ -40,7 +40,7 @@ function loadXMLDoc() {
             document.getElementById("HOME-demo-XML").innerHTML = txt;
         }
     };
-    xhttp.open("GET", "Content/Resources/AJAX.cd_catalog.xml", true);
+    xhttp.open("GET", "../Content/Resources/AJAX.cd_catalog.xml", true);
     xhttp.send();
 }
 
@@ -53,7 +53,7 @@ function SwitchDoc(url,callFunc) {
             callFunc(xhttp);
         }
     };
-    xhttp.open("GET", "Content/Resources/"+url, true);
+    xhttp.open("GET", "../Content/Resources/"+url, true);
     xhttp.send();
 }
 
@@ -96,7 +96,7 @@ function loadHighlight(originS, lighter) {
     var hlString = originS.replace(/<(?:.|\n)*?>/gm, '');
     for (var i = 0; i < query.length; i++) {
         if (query[i] !== "" && originS.toLowerCase().indexOf(query[i].toLowerCase())>0) {
-            var oldValue = "/" + originS.substr(originS.toLowerCase().indexOf(query[i].toLowerCase()), query[i].length) + "/gi";
+            var oldValue = originS.substr(originS.toLowerCase().indexOf(query[i].toLowerCase()), query[i].length) ;
             console.log(oldValue);
             hlString = hlString.replace(oldValue, "<span class='search-highlight'>" + oldValue + "</span>");
         }
