@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\AJAXController.cs" />
+    <Compile Include="Controllers\JavascriptController.cs" />
     <Compile Include="Controllers\JSONController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,8 +141,11 @@
     <Content Include="Content\Resources\AJAX.ajax_info.txt" />
     <Content Include="Content\Resources\AJAX.cd_catalog.xml" />
     <Content Include="Content\Resources\JSON.myTutorials.txt" />
+    <Content Include="Content\Resources\pic_bulboff.gif" />
+    <Content Include="Content\Resources\pic_bulbon.gif" />
     <Content Include="Content\Themes\bootstrap.css" />
     <Content Include="Content\Themes\bootstrap.min.css" />
+    <Content Include="Content\Themes\Javascript.css" />
     <Content Include="Content\Themes\JSON.Sample.css" />
     <Content Include="Content\Themes\simple-sidebar.css" />
     <Content Include="Global.asax" />
@@ -150,6 +154,7 @@
     <Content Include="Scripts\Common\bootstrap.min.js" />
     <Content Include="Scripts\Common\Common.js" />
     <Content Include="Scripts\Common\jquery.js" />
+    <Content Include="Scripts\Javascript\Basic.js" />
     <Content Include="Scripts\JSON\Example.js" />
     <Content Include="Scripts\JSON\HTTP.js" />
     <Content Include="Scripts\JSON\Intro.js" />
@@ -179,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AJAX\ViewAJAX.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Javascript\ViewJavascript.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

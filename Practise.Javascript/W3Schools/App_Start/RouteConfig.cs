@@ -16,7 +16,7 @@ namespace W3Schools
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "AJAX", action = "ViewAJAX", id = UrlParameter.Optional }
+                defaults: new { controller = "Javascript", action = "ViewJavascript", id = UrlParameter.Optional }
             );
         }
     }
