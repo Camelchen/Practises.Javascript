@@ -1,6 +1,27 @@
 ﻿///<reference path="~/Scripts/Common/Common.js" />
 ShowHeader();
 
+function randomNumber() {
+    document.getElementById("js-demo-math-random").innerHTML = Math.random()
+    setTimeout(function () {
+        randomNumber();
+    }, 500)
+}
+
+function splitString() {
+
+    var o = document.getElementById("js-demo-string-split-input").value.split(",");
+    document.getElementById("js-demo-string-split-output").innerHTML = "";
+    for (var i = 0; i < o.length; i++) {
+        if (o[i].value !== "")
+        {
+            document.getElementById("js-demo-string-split-output").innerHTML += "<ol>"+o[i] + "</ol>";
+        }
+    }
+
+
+}
+
 function introInput() {
     var inputValue, text;
     inputValue = document.getElementById("js-intro-input").value;
