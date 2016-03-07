@@ -11,10 +11,13 @@ namespace W3Schools.Controllers
         //
         // GET: /Javascript/
 
-        public ActionResult ViewJavascript()
+        public ActionResult ViewJavascriptBasic()
         {
             return View();
         }
-
+        public ActionResult ViewJavascriptAdvanced()
+        {
+            return View();
+        }
     }
 }

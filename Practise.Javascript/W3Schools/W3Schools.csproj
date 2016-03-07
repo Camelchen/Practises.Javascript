@@ -154,6 +154,7 @@
     <Content Include="Scripts\Common\bootstrap.min.js" />
     <Content Include="Scripts\Common\Common.js" />
     <Content Include="Scripts\Common\jquery.js" />
+    <Content Include="Scripts\Javascript\Advanced-Form.js" />
     <Content Include="Scripts\Javascript\Basic.js" />
     <Content Include="Scripts\JSON\Example.js" />
     <Content Include="Scripts\JSON\HTTP.js" />
@@ -186,7 +187,10 @@
     <Content Include="Views\AJAX\ViewAJAX.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Javascript\ViewJavascript.cshtml" />
+    <Content Include="Views\Javascript\ViewJavascriptBasic.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Javascript\ViewJavascriptAdvanced.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

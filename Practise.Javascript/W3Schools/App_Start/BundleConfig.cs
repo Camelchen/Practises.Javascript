@@ -28,9 +28,13 @@ namespace W3Schools
                 "~/Scripts/AJAX/*.js");
             bundles.Add(bdAJAX);
 
-            var bdJavascript = new ScriptBundle("~/Scripts/Javascript").Include(
-                "~/Scripts/Javascript/*.js");
-            bundles.Add(bdJavascript);
+            var bdJavascriptBasic = new ScriptBundle("~/Scripts/JavascriptBasic").Include(
+                "~/Scripts/Javascript/Basic.js");
+            bundles.Add(bdJavascriptBasic);
+
+            var bdJavascriptAdvanced = new ScriptBundle("~/Scripts/JavascriptAdvanced").Include(
+                "~/Scripts/Javascript/Advanced*");
+            bundles.Add(bdJavascriptAdvanced);
 
             var bdJQuery =
                 new ScriptBundle("~/Scripts/JQuery", "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.js").Include(

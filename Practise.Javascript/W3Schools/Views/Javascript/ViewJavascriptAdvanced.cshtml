@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "ViewJavascript.Advanced";
+    Layout = "~/Views/Shared/Site_LayoutPage.cshtml";
+}
+
+<h2>ViewJavascript.Advanced</h2>
+
+
+@*object method*@
+<ul>
+    <li>
+        <p id="js-adv-om-oldName"></p>
+        <input id="js-adv-om-input"/>
+        <button type="button" onclick="changeName(document.getElementById('js-adv-om-input').value)">change name</button>
+        <p id="js-adv-om-newName"></p>
+    </li>
+</ul>
+
+@*form validate*@
+<ul>
+    <li>
+        <input id="js-adv-formvalidate-input" type="number" min="5" max="10" />
+        <button type="button" onclick="formValidate()">form validate</button>
+        <p id="js-adv-formvalidate-output"></p>
+    </li>
+</ul>
+
+
+@Scripts.Render("~/Scripts/JavascriptAdvanced")
+
+
