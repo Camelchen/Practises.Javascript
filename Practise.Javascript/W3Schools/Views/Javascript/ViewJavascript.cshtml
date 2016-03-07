@@ -7,10 +7,34 @@
 
 @Scripts.Render("~/Scripts/Javascript")
 
+
+@*js-demo-trycatch*@
+<ul>
+    <li>
+        <p>input digit number 5 to 10 :</p>
+        <input id="js-demo-trycatch-input"/>
+        <button type="button" onclick="tryCatch()">test input</button>
+        <p id="js-demo-trycatch-result"></p>
+    </li>
+</ul>
+
+
+
+
+@*js-demo-array*@
+<ul>
+    <li>
+        <p>try to loop array</p>
+        <button type="button" onclick="loopArray()">Loop array</button>
+        <p id="js-demo-array-result"></p>
+    </li>
+</ul>
+
+
 @*js-demo-math*@
 <ul>
     <li>
-        <button type="button" onclick="randomNumber()">Random Now!</button>
+        <button id="js-demo-math-random-btn" type="button" onclick="randomNumber('start')">Random Now!</button>
         <p id="js-demo-math-random"></p>
     </li>
 </ul>

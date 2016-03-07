@@ -1,11 +1,63 @@
 ﻿///<reference path="~/Scripts/Common/Common.js" />
 ShowHeader();
 
-function randomNumber() {
-    document.getElementById("js-demo-math-random").innerHTML = Math.random()
-    setTimeout(function () {
-        randomNumber();
-    }, 500)
+
+function tryCatch() {
+    var input = document.getElementById("js-demo-trycatch-input").value;
+    document.getElementById("js-demo-trycatch-result").innerHTML = "";
+    try {
+        if (input === "") throw "empty";
+        if (isNaN(input)) {
+            throw "not a number";
+        }
+        if (input < 5) {
+            throw "too low";
+        }
+        if (input > 10) {
+            throw "too high";
+        }
+    } catch (e) {
+        document.getElementById("js-demo-trycatch-result").innerHTML = "input is " + e;
+    } finally {
+        document.getElementById("js-demo-trycatch-input").innerHTML = "";
+    }
+}
+
+function loopArray() {
+    var result="";
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    for (var i = 0; i < fruits.length; i++) {
+        result += "<li>" + fruits[i] + "</li>";
+    }
+    document.getElementById("js-demo-array-result").innerHTML =  result;
+}
+
+
+var date = new Date();
+//console.log(date);
+date.setDate(12);
+//console.log(date);
+
+
+
+function randomNumber(flag) {
+
+    if (flag === 'start') {
+        document.getElementById("js-demo-math-random-btn").innerHTML = "Random Stop!";
+        document.getElementById("js-demo-math-random-btn").setAttribute("onClick", "randomNumber('end')");
+        document.getElementById("js-demo-math-random").innerHTML = Math.random();
+        setTimeout(function () {
+            if (document.getElementById("js-demo-math-random-btn").getAttribute("onClick").indexOf('end') > 0) {
+                randomNumber('start');
+            }
+        }, 500);
+    }
+
+    if (flag === 'end') {
+        document.getElementById("js-demo-math-random-btn").innerHTML = "Random Start!";
+        document.getElementById("js-demo-math-random-btn").setAttribute("onClick", "randomNumber('start')");
+        document.getElementById("js-demo-math-random").innerHTML = "Stop!";
+    }
 }
 
 function splitString() {
