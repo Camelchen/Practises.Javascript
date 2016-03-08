@@ -154,7 +154,7 @@
     <Content Include="Scripts\Common\bootstrap.min.js" />
     <Content Include="Scripts\Common\Common.js" />
     <Content Include="Scripts\Common\jquery.js" />
-    <Content Include="Scripts\Javascript\Advanced-Form.js" />
+    <Content Include="Scripts\Javascript\Advanced.js" />
     <Content Include="Scripts\Javascript\Basic.js" />
     <Content Include="Scripts\JSON\Example.js" />
     <Content Include="Scripts\JSON\HTTP.js" />

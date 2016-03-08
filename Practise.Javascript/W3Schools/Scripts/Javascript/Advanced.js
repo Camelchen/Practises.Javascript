@@ -1,24 +1,60 @@
 ﻿///<reference path="~/Scripts/Common/Common.js" />
 ShowHeader();
 
-function foo(count) {
-    var funcs = [];
-    for (var i = 0; i < count; i++) {
-        funcs.push(function () {
-            console.log('>>> ' + i);
-        })
+
+//change font size
+function changeSizer(fontSize) {
+    document.body.style.fontSize = fontSize + 'px';
+}
+
+//prototype chain
+function Being() {
+    this.living = true;
+}
+Being.prototype.breathes = function () {
+    return 'here is real breathes';
+}
+
+Robert.prototype = new Being;
+
+function Robert() {
+    this.living = false;
+}
+Robert.prototype.fakeBreathes = function () {
+    return "cannot breathes, fake it";
+}
+var me = new Robert();
+console.log("~~~Prototype chain");
+console.log(me.living);
+console.log(me.fakeBreathes());
+console.log(me.breathes());
+
+
+// Constructor
+function Kid(name) {
+    // Private
+    var idol = "Paris Hilton";
+    this.getIdol = function () {
+        return idol;
+    };
+
+    //public
+    this.name = name;
+    this.getName = function () {
+        return this.name;
     }
-    return funcs;
-}
-
-var funcs = foo(3);
-console.dir(funcs);
-for (var j = 0; j < funcs.length; j++) {
-    funcs[j]();
 }
 
 
+var kenny = new Kid("Kenny");
+console.log("~~~Constructor");
+console.log(kenny.getIdol());
+console.log(kenny.getName());
 
+
+
+
+//form
 var personCN = new person("John", "Doe", 23, "green");
 document.getElementById("js-adv-om-oldName").innerHTML = "old name is "+personCN.lastName;
 
