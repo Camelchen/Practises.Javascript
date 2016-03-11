@@ -31,16 +31,22 @@ function ShowTailer() {
 }
 
 
-function ShowOutput(outputString,sameLine) {
+var lineMark = {comment:"comment"}
+
+function ShowOutput(outputString,lineMark) {
 
     if (outputString == undefined) {
         outputString = "";
     }
-    document.write(outputString);
-    if (sameLine == undefined) {
-        document.write("<br/>");
-    } else {
-        document.write(", ");
+
+    switch (lineMark) {
+    case "comment":
+        document.write("<br/><li>" + outputString + "</li>");
+        break;
+    default:
+        document.write("  "+outputString);
     }
+    document.write("<br/>");
+
 }
 
