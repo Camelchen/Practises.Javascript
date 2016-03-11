@@ -4,12 +4,12 @@ ShowHeader();
 var h1 = document.createElement("h1");
 h1.id = "JSON-Example-h1";
 h1.innerHTML = "Customers";
-document.getElementById(GetCurrentFile().FileNameWithoutExt).appendChild(h1);
+document.getElementById(getCurrentFile().FileNameWithoutExt).appendChild(h1);
 
 var div = document.createElement("div");
 div.id = "JSON-Example-div01";
 div.innerHTML = "div01";
-document.getElementById(GetCurrentFile().FileNameWithoutExt).appendChild(div);
+document.getElementById(getCurrentFile().FileNameWithoutExt).appendChild(div);
 
 
 var PHPXmlhttp = new XMLHttpRequest();

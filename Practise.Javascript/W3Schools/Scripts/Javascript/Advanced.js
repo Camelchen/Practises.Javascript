@@ -24,10 +24,10 @@ Robert.prototype.fakeBreathes = function () {
     return "cannot breathes, fake it";
 }
 var me = new Robert();
-console.log("~~~Prototype chain");
-console.log(me.living);
-console.log(me.fakeBreathes());
-console.log(me.breathes());
+//console.log("~~~Prototype chain");
+//console.log(me.living);
+//console.log(me.fakeBreathes());
+//console.log(me.breathes());
 
 
 // Constructor
@@ -47,16 +47,21 @@ function Kid(name) {
 
 
 var kenny = new Kid("Kenny");
-console.log("~~~Constructor");
-console.log(kenny.getIdol());
-console.log(kenny.getName());
+//console.log("~~~Constructor");
+//console.log(kenny.getIdol());
+//console.log(kenny.getName());
 
 
 
 
 //form
 var personCN = new person("John", "Doe", 23, "green");
-document.getElementById("js-adv-om-oldName").innerHTML = "old name is "+personCN.lastName;
+
+//create new DOM
+var newElement = document.createElement("p");
+newElement.id = "js-adv-om-oldName";
+newElement.innerHTML = "old name is " + personCN.lastName;
+document.getElementById(getCurrentFile().FileNameWithoutExt).appendChild(newElement);
 
 
 function person(firstName, lastName, age, eyeColor) {

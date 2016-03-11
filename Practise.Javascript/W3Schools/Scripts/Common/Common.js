@@ -1,4 +1,4 @@
-﻿function GetCurrentFile() {
+﻿function getCurrentFile() {
     var file = new Array;
     
     var curPath = document.scripts[document.scripts.length - 1].src;
@@ -12,22 +12,18 @@
 
 function ShowHeader(headerType) {
     
-    var curPath = document.scripts[document.scripts.length - 1].src;
-    var curFileName = curPath.substring(curPath.lastIndexOf("/") + 1);
-
-
     document.write("<br/>");
     document.write(Array(80).join("*"));
     //for debug
     if (headerType === 0) {
-        document.write("<b class='curFileName style='color:blue'>" + curFileName + "</b>");
+        document.write("<b class='curFileName style='color:blue'>" + getCurrentFile().FileName + "</b>");
     }
     else {
-        document.write("<b class='curFileName'>" + curFileName + "</b>");
+        document.write("<b class='curFileName'>" + getCurrentFile().FileName + "</b>");
     }
 
     document.write("<br>");
-    document.write("<p id='"+curFileName.substring(0,curFileName.length-3)+"' class='jsOutput'></p>");
+    document.write("<p id='"+getCurrentFile().FileNameWithoutExt+"' class='jsOutput'></p>");
 }
 
 function ShowTailer() {
@@ -47,3 +43,4 @@ function ShowOutput(outputString,sameLine) {
         document.write(", ");
     }
 }
+

@@ -2,8 +2,8 @@
 ShowHeader();
 
 var p = document.createElement("p");
-p.innerHTML = "Here is append text for "+GetCurrentFile().FileName;
-document.getElementById(GetCurrentFile().FileNameWithoutExt).appendChild(p);
+p.innerHTML = "Here is append text for "+getCurrentFile().FileName;
+document.getElementById(getCurrentFile().FileNameWithoutExt).appendChild(p);
 
 var myArray = [
     {
@@ -24,7 +24,7 @@ var myArray = [
 var id01 = document.createElement("p");
 id01.id = "id01";
 id01.innerHTML = "Here is " + id01.id;
-document.getElementById(GetCurrentFile().FileNameWithoutExt).appendChild(id01);
+document.getElementById(getCurrentFile().FileNameWithoutExt).appendChild(id01);
 
 
 myFunction(myArray);
@@ -37,7 +37,7 @@ document.getElementById("id01").innerHTML += '<a href="' + url + '">file url</a>
 
 var id02 = document.createElement("p");
 id02.id = "id02";
-document.getElementById(GetCurrentFile().FileNameWithoutExt).appendChild(id02);
+document.getElementById(getCurrentFile().FileNameWithoutExt).appendChild(id02);
 
 xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {

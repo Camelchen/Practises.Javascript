@@ -1,4 +1,4 @@
-﻿function GetCurrentFile() {
+﻿function getCurrentFile() {
     var file = new Array;
     
     var curPath = document.scripts[document.scripts.length - 1].src;

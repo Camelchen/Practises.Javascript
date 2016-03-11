@@ -1,4 +1,4 @@
-﻿function GetCurrentFileInfo() {
+﻿function getCurrentFileInfo() {
     var fileInfo = new Array;
     var curPath = document.scripts[document.scripts.length - 1].src;
     var curFileName = curPath.substring(curPath.lastIndexOf("/") + 1);
