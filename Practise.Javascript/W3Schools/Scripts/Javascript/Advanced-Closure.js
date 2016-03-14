@@ -81,9 +81,107 @@ testList();
 
 ShowOutput("example 6", lineMark.comment);
 
+function sayAlice() {
+    var say = function () {
+        ShowOutput(alice);
+    }
+    var alice = "hello alice";
+    return say;
+}
+
+sayAlice()();
+
+ShowOutput("example 7", lineMark.comment);
 
 
+function newClosure(someNum,someRef) {
+    var num = someNum;
+    var anArray = [1, 2, 3];
+    var ref = someRef;
+    return function(x) {
+        num += x;
+        anArray.push(num);
+        ShowOutput('num: ' + num +
+            '\nanArray ' + anArray.toString() +
+            '\nref.someVar ' + ref.someVar);
+    }
+}
+
+obj = { someVar: 4 };
+fn1 = newClosure(4, obj);
+fn2 = newClosure(5, obj);
+fn1(1);
+fn2(1);
+obj.someVar++;
+fn1(2);
+fn1(2);
+fn2(2);
+
+ShowOutput("example 8", lineMark.comment);
+
+function foo(x) {
+    var tmp = 3;
+
+    function bar(y) {
+        ShowOutput(x + y + (++tmp));
+    }
+
+    bar(10);
+}
+foo(2);
+foo2(2)(9);
+
+ShowOutput("example 9", lineMark.comment);
+
+function foo2(x) {
+    var tmp = 3;
+
+    return function (y) {
+        ShowOutput(x + y + (++tmp));
+    }
+}
+
+var bar = foo2(3);
+bar(10);
+bar(10);
+
+ShowOutput("example 10", lineMark.comment);
+
+function foo3(x) {
+    var tmp = 3;
+    return function (y) {
+        ShowOutput(x + y + tmp);
+        x.memb = x.memb ? x.memb + 1 : 1;
+        ShowOutput(x.memb);
+    }
+}
+
+var age = new Number(2);
+var bar = foo3(age);
+bar(10);
+bar(10);
 
 
+var funcs = [];
+for (var i = 0; i < 3; i++) {          // let's create 3 functions
+    funcs[i] = function (i) {            // and store them in funcs
+        ShowOutput("My value: " + i); // each should log its value.
+    };
+}
+for (var j = 0; j < 3; j++) {
+    funcs[j]();                        // and now let's run each one to see
+}
 
 
+var funcs = [];
+
+for (var i = 0; i < 3; i++) {
+    funcs[i] = (function (index) {
+        return function () {
+            ShowOutput("My value: " + index);
+        };
+    }(i));
+}
+for (var j = 0; j < 3; j++) {
+    funcs[j]();
+}
