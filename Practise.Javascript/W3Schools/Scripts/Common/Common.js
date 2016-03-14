@@ -41,7 +41,7 @@ function ShowOutput(outputString,lineMark) {
 
     switch (lineMark) {
     case "comment":
-        document.write("<br/><li>" + outputString + "</li>");
+        document.write("<br/> // " + outputString );
         break;
     default:
         document.write("  "+outputString);
