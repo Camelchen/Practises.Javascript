@@ -19,6 +19,7 @@ namespace W3Schools.Controllers
 
         public ActionResult GetHint(string query)
         {
+            MvcApplication.log.Info("try to hint: " + query);
             Collection<string> spSet = new Collection<string>();
             spSet.Add( "Deployment_Box3_FES_Live_DB_CopyDatal sql");
             spSet.Add( "Deployment_Box3_FES_Live_DB_CopyData2sql");
@@ -68,6 +69,7 @@ namespace W3Schools.Controllers
                     if (AndHint)
                     {
                         hint += "\r\n" + "<option value='" + spName + "'>" + spName + "</option>";
+                        MvcApplication.log.Info("hint stored procedure: " + spName);
                     }
                 }
             }

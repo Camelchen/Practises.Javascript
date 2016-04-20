@@ -193,6 +193,12 @@
   <ItemGroup>
     <Content Include="Views\Javascript\ViewJavascriptAdvanced.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\QSUtility\QSUtility.Common\QSUtility.Common.csproj">
+      <Project>{085325a8-7038-447b-b33c-33c51c78f72a}</Project>
+      <Name>QSUtility.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
