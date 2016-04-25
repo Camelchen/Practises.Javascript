@@ -45,4 +45,15 @@ SP Name: <input id="search-box" onkeyup="showHint(this.value)"/>
 </select>
 
 <p id="SP-Content"></p>
+<br/>
+
+
+<button id="btn-cookies-showAll" onclick="showAllCookies()">Show all cookies</button>
+<button id="btn-cookies-clearAll" onclick="clearAllCookies()">Clear all cookies</button>
 <br />
+Key: <input id="input-cookie-key"/>
+Value: <input id="input-cookie-value" />
+<button id="btn-cookies-addCookie" onclick="addCookie(document.getElementById('input-cookie-key').value, document.getElementById('input-cookie-value').value)">Add Cookie</button>
+<button id="btn-cookies-delCookie" onclick="delCookie(document.getElementById('input-cookie-key').value)">Delete Cookie</button>
+<p id="current-cookies"></p>
+

@@ -104,3 +104,57 @@ function loadHighlight(originS, lighter) {
 
     return hlString;
 }
+
+
+//cookies
+function showAllCookies() {
+
+    document.getElementById("current-cookies").innerHTML = "";
+
+    var curCookies = document.cookie.split(";");
+
+    //for (var i = 0; i < curCookies.length; i++) {
+    //    var c = curCookies[i];
+    //    document.getElementById("current-cookies").innerHTML += c;
+    //}
+
+    document.getElementById("current-cookies").innerHTML = curCookies;
+
+}
+
+function clearAllCookies() {
+    
+    var curCookies = document.cookie.split(";");
+    for (var i = 0; i < curCookies.length; i++) {
+        delCookie(curCookies[i].split("=")[0]);
+    }
+
+    showAllCookies();
+}
+
+function addCookie(cookieKey, cookieValue, exMinutes) {
+
+    if (cookieKey === "") {
+        window.alert("the name of cookie is EMPTY!!");
+        return;
+    }
+
+    if (exMinutes === undefined) {
+        exMinutes = 1;
+    }
+    
+    var d = new Date();
+    d.setTime(d.getTime() + (exMinutes * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cookieKey + "=" + cookieValue + ";" + expires + ";path=/";
+
+    showAllCookies();
+}
+
+function delCookie(cookieKey) {
+    var d = new Date();
+    d.setTime(d.getTime() - (1 * 24 * 3600 * 1000));//expire day is one day before.
+    document.cookie = cookieKey + "=;expires = " + d.toUTCString();
+
+    showAllCookies();
+}
