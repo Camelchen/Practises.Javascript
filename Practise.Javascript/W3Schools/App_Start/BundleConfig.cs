@@ -20,6 +20,8 @@ namespace W3Schools
         {
             bundles.Add(new ScriptBundle("~/Scripts/Common").Include("~/Scripts/Common/*.js"));
 
+
+
             var bdJSON = new ScriptBundle("~/Scripts/JSON").Include(
                 "~/Scripts/JSON/*.js");
             bundles.Add(bdJSON);
@@ -44,6 +46,10 @@ namespace W3Schools
                 new ScriptBundle("~/Scripts/JQuery", "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.js").Include(
                     "~/Scripts/jquery-{version}.js");
             bundles.Add(bdJQuery);
+
+            var bdJQuery2 = new ScriptBundle("~/Scripts/JQuery2").Include(
+                "~/Scripts/JQuery/*.js");
+            bundles.Add(bdJQuery2);
 
             bundles.Add(new StyleBundle("~/Content/Themes").Include(
                 "~/Content/Themes/*.css")
