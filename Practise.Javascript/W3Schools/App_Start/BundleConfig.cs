@@ -18,9 +18,10 @@ namespace W3Schools
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+            bundles.Add(new ScriptBundle("~/Scripts/Log4Javascript").Include("~/Scripts/Log4Javascript/*.js"));
+
             bundles.Add(new ScriptBundle("~/Scripts/Common").Include("~/Scripts/Common/*.js"));
-
-
 
             var bdJSON = new ScriptBundle("~/Scripts/JSON").Include(
                 "~/Scripts/JSON/*.js");

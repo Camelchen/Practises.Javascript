@@ -50,3 +50,5 @@ function ShowOutput(outputString,lineMark) {
 
 }
 
+var log = log4javascript.getDefaultLogger();
+
