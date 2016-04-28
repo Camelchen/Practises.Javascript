@@ -13,6 +13,7 @@ namespace MDN.Controllers
 
         public ActionResult Index()
         {
+            
             return View();
         }
 

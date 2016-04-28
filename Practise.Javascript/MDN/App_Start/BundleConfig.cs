@@ -8,6 +8,7 @@ namespace MDN
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/log4javascript").Include("~/Scripts/Log4Javascript/*.js"));
  
             bundles.Add(new ScriptBundle("~/bundles/common").Include("~/Scripts/MDN/MDN.Common*"));
             bundles.Add(new ScriptBundle("~/bundles/shared").Include("~/Scripts/MDN/MDN.Shared*"));

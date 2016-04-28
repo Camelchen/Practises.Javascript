@@ -1,4 +1,6 @@
-﻿function getCurrentFileInfo() {
+﻿var log = log4javascript.getDefaultLogger();
+
+function getCurrentFileInfo() {
     var fileInfo = new Array;
     var curPath = document.scripts[document.scripts.length - 1].src;
     var curFileName = curPath.substring(curPath.lastIndexOf("/") + 1);
@@ -38,3 +40,6 @@ function showMenu() {
     }
 
 }
+
+
+
