@@ -2,8 +2,6 @@
 
 ShowHeader();
 
-
-
 //hide element
 $("p#hiddenByClick").ready(function () {
     $("p#hiddenByClick").click(function () {
@@ -31,7 +29,6 @@ $("p#hideAndShow").ready(function () {
         log.info($("#hideAndShow").find("span").attr("id") + " been shown.");
         $("#span-hideAndShow").show();
     });
-
 });
 
 
@@ -68,3 +65,39 @@ $("p#appendElements").ready(function () {
         }
     });
 });
+
+//toggle css element
+$("p#addCssElement")
+    .ready(function() {
+        $("#btn-addCssElement-zoom")
+            .click(function() {
+                $(this).parent().toggleClass("zoom");
+                if ($(this).text() === "zoom in") {
+                    $(this).text("zoom out");
+                } else {
+                    $(this).text("zoom in");
+                }
+                log.info($(this).parent().attr("id") + " font size is: " + $(this).parent().css("font-size"));
+            });
+    });
+
+//ajax in jquery
+$("#ajaxGetHint")
+    .ready(function () {
+        $("#input-ajaxGetSpHint").val("");
+        $("#input-ajaxGetSpHint")
+            .keyup(function() {
+                var inputString = $(this).val();
+                if (inputString.length > 2) {
+                    $.get("../AJAX/GetHint?query=" + inputString,
+                        function(data, status) {
+                            log.info(status + " ,GetHint?query=" + inputString);
+                            $("#ajaxGetSpHintResult").html(data);
+                        });
+                };
+            });
+    });
+
+
+
+
