@@ -1,4 +1,4 @@
-﻿var log = log4javascript.getDefaultLogger();
+﻿var jslog = log4javascript.getDefaultLogger();
 
 function getCurrentFileInfo() {
     var fileInfo = new Array;
@@ -40,6 +40,14 @@ function showMenu() {
     }
 
 }
+
+
+function showInfoOutput(targetId,obj) {
+
+    jslog.info($(targetId).attr("id") + " : " + obj);
+    $(targetId).append(obj+", ");
+}
+
 
 
 
