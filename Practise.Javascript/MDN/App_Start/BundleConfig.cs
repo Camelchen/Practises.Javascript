@@ -14,7 +14,8 @@ namespace MDN
             bundles.Add(new ScriptBundle("~/bundles/shared").Include("~/Scripts/MDN/MDN.Shared*"));
             bundles.Add(new ScriptBundle("~/bundles/home").Include("~/Scripts/MDN/MDN.Home*"));
             bundles.Add(new ScriptBundle("~/bundles/guide").Include("~/Scripts/MDN/MDN.Guide*"));
-            
+            bundles.Add(new ScriptBundle("~/bundles/reference").Include("~/Scripts/MDN/MDN.Reference*"));
+
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));

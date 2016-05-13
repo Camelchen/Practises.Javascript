@@ -16,6 +16,11 @@ namespace MDN.Controllers
             
             return View();
         }
+        public ActionResult Reference()
+        {
+
+            return View();
+        }
 
     }
 }

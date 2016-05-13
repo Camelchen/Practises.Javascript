@@ -26,6 +26,7 @@ namespace MDN
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            log.Info("application starting....");
         }
     }
 }

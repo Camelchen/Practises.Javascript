@@ -16,7 +16,7 @@ namespace MDN
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Guide", action = "Reference", id = UrlParameter.Optional }
             );
         }
     }

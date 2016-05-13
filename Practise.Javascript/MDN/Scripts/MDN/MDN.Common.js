@@ -23,8 +23,12 @@ function showMenu() {
             url: "../Home/Index"
         },
         {
-            name: "MDN Guide",
+            name: "Guide",
             url: "../Guide/Index"
+        },
+        {
+            name: "Reference",
+            url: "../Guide/Reference"
         }
     ];
 
