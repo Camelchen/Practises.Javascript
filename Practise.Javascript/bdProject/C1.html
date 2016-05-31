@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>C1</title>
+	<script type="text/javascript">
+
+	var images= JSON.parse('{"images": [ \
+		{"name":"img-a","url":"img-a.jpg"},	\
+		{"name":"img-b","url":"img-b.jpg"},	\
+		{"name":"img-c","url":"img-c.jpg"}]}');
+
+	var images = ["img-a","img-b","img-c"];
+
+	function aiGenerate(){
+
+	}
+
+	function compare(a,b){
+
+		//compare a with b
+
+		//show result
+
+	}
+	
+	function tryIt(imgId){
+		console.log(imgId);
+
+		var a = imgId;
+		var b = aiGenerate();
+		compare(a,b);
+
+	}
+
+
+
+
+	function buildPage(){
+
+		for (var i = images.length - 1; i >= 0; i--) {
+
+			var imgElement = document.createElement('p');
+			imgElement.setAttribute('class','img');
+
+
+			var img = document.createElement('img');
+			img.setAttribute('id',images[i]);
+			img.setAttribute('src',images[i]+'.jpg');
+			img.setAttribute('onclick','tryIt(this.id)');
+			imgElement.appendChild(img);
+
+			var imgLabel = document.createElement('span');
+			imgLabel.innerHTML= images[i];
+			imgElement.appendChild(imgLabel);
+
+			document.getElementById('img-area').appendChild(imgElement);
+		};
+	}
+
+
+	</script>
+</head>
+<body>
+
+
+<p id='img-area'></p>
+<p id='result-area'></p>
+
+
+<script type="text/javascript">buildPage()</script>
+</body>
+</html>
