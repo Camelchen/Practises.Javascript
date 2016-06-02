@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title>emag-t1</title>
+    <style>
+
+    </style>
+	<script type="text/javascript">
+
+	var images= JSON.parse('{"images": [ \
+		{"name":"img-a","url":"img-a.jpg"},	\
+		{"name":"img-b","url":"img-b.jpg"},	\
+		{"name":"img-c","url":"img-c.jpg"}]}');
+
+	var images = ["img-a","img-b","img-c"];
+
+	function aiGenerate(){
+        
+        var rIndex = Math.floor(Math.random()*images.length);
+        console.log(rIndex);
+        return images[rIndex];
+
+	}
+
+        
+    function outputResult(oStr) {
+        document.getElementById("result-area").innerHTML = oStr;
+    }
+        
+	function compare(a,b){
+        
+        var retStr;
+        //compare
+
+            if (a==b)
+            {
+                retStr = 'equal';
+            }
+        
+            else if ((a==images[0] && b==images[images.length-1]) || (b==images[0] && a==images[images.length-1]))
+            {
+                retStr = 'lose';
+            }
+            else
+            {
+                retStr = 'win';
+            }
+
+        //show result
+        
+        outputResult("AI= "+a+", You= "+ b+", result="+retStr);
+        
+        var tryAgain = document.createElement('a');
+        tryAgain.setAttribute('id','tryAgain');
+        tryAgain.setAttribute('href','emag-t1.html');
+        tryAgain.innerHTML='Try again!'
+        
+        var linebreak = document.createElement('br');
+        document.getElementById("result-area").appendChild(linebreak);
+        document.getElementById("result-area").appendChild(tryAgain);
+
+	}
+        
+
+	
+	function tryIt(imgId){
+		console.log(imgId);
+        
+        outputResult("you select "+imgId);
+
+		var a = aiGenerate();
+        var b = imgId;
+		compare(a,b);
+	}
+
+
+	function buildInitPage(){
+
+		for (var i = images.length - 1; i >= 0; i--) {
+
+			var imgElement = document.createElement('p');
+			imgElement.setAttribute('class','img');
+
+
+			var img = document.createElement('img');
+			img.setAttribute('id',images[i]);
+			img.setAttribute('src',images[i]+'.jpg');
+			img.setAttribute('onclick','tryIt(this.id)');
+			imgElement.appendChild(img);
+
+			var imgLabel = document.createElement('span');
+			imgLabel.innerHTML= images[i];
+			imgElement.appendChild(imgLabel);
+
+			document.getElementById('img-area').appendChild(imgElement);
+		};
+        
+        document.getElementById("result-area").innerHTML="prepared to try!"
+	}
+
+	</script>
+</head>
+<body>
+
+
+<p id='img-area'></p>
+
+<p id='result-area'></p>
+
+
+<script type="text/javascript">buildInitPage()</script>
+</body>
+</html>
