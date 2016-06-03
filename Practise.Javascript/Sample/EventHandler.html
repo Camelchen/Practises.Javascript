@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>event handler</title>
+    <style>
+
+
+    </style>
+
+    <script type="text/javascript" src="..\log4javascript.js"></script>
+    <script type="text/javascript">
+        var log = log4javascript.getDefaultLogger();
+
+        function init() {
+            log.info('init');
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+    <div id="d1">1
+        <!-- the topmost -->
+        <div id="d2">&nbsp;&nbsp;2
+            <div id="d3">&nbsp;&nbsp;&nbsp;&nbsp;3
+                <!-- the innermost -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <button id='btn-start ' onclick='init() '>Start</button>
+
+    <script type="text/javascript">
+        document.getElementById('d1').addEventListener('click', function() {
+                console.log(1);
+                //event.stopPropagation();
+            },
+            true);
+        document.getElementById('d2').addEventListener('click', function() {
+                console.log('cap2');
+                //event.stopPropagation();
+            },
+            true);
+        document.getElementById('d2').addEventListener('click', function() {
+                console.log('bub2');
+                //event.stopPropagation();
+            },
+            false);
+        document.getElementById('d3').addEventListener('click', function() {
+                console.log(3);
+                //event.stopPropagation();
+            },
+            false);
+
+    </script>
+</body>
+
+</html>

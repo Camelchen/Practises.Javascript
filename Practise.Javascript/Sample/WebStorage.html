@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="panel panel-default">
+        <div class="panel-heading">Session & Local Storage</div>
+        <div class="panel-body">
+            <input type='text' id='textInput' />
+            <select id='type'>
+                <option value='session'>Session Storage</option>
+                <option value='local'>Local Storage</option>
+            </select>
+            <input type="button" id='btnLogsStorage' value="Save" onclick="saveLogs()">
+            <input type="button" id='btnLogsLoad' value="Load" onclick="loadLogs()">
+
+            <div id='logs'>Logs:
+                <p id=logsContent></p>
+            </div>
+            <button onclick="clearLogs()">Clear!!</button>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Web SQL Storage</div>
+        <div class="panel-body">
+            <p id='packagesInfo'>here is packages list</p>
+            <div>
+                <input type=text id='pkgName' placeholder="Package Name">
+                <input type=text id='pkgOwner' placeholder="Package Owner">
+                <input type=date id='pkgDate'>
+                <img src="https://www.bqe.com/archioffice2013/help/images/add_icon.png" onclick="addPackageInfo()" style="cursor: pointer;">
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pkgDate').valueAsDate = new Date();
+
+        function openDB(name) {
+
+            var openRequest = indexedDB.open(name);
+
+            openRequest.onsuccess = function(e) {
+                myDB.db = e.target.result;
+                console.log("open success!");
+            }
+
+            openRequest.onupgradeneeded = function(e) {
+                var db = e.target.result;
+
+                // Create an objectStore for this database
+                var packages = db.createObjectStore("iPackages", {
+                    autoIncrement: true
+                });
+
+            }
+        }
+
+        function addData(db, storeName) {
+            var transaction = db.transaction(storeName, 'readwrite');
+            var store = transaction.objectStore(iPackages);
+        }
+
+
+        var myDB = {
+            name: 'packages',
+            version: 1,
+            db: null
+        };
+
+        openDB(myDB.name);
+
+        setTimeout(function() {
+            addData(myDB, 'iPackages');
+        }, 1000);
+
+
+
+
+
+        function reloadPackagesInfo() {
+
+            document.getElementById('packagesInfo').innerHTML = 'pkgName : ' + sessionStorage.getItem('pkgName');
+
+        }
+
+
+        function addPackageInfo() {
+
+            var pkgName = document.getElementById('pkgName')
+
+            sessionStorage.setItem('pkgName', document.getElementById('pkgName').value);
+
+            addData(myDB, 'pkgName');
+
+            reloadPackagesInfo();
+        }
+
+
+
+
+
+
+
+        //Session & Local Storage
+
+        var logs = document.getElementById('logsContent');
+        var msg = document.getElementById('textInput');
+
+        function saveLogs() {
+            var type = document.getElementById('type');
+            if (type.value == 'session') {
+                sessionStorage.setItem(new Date().getTime(), msg.value);
+            } else {
+                localStorage.setItem(new Date().getTime(), msg.value);
+            }
+        }
+
+        function loadLogs() {
+            logs.innerHTML = '';
+
+            var type = document.getElementById('type');
+            if (type.value == 'session') {
+                var selectStorage = sessionStorage;
+            } else {
+                var selectStorage = localStorage;
+            }
+
+            for (var i = 0, len = selectStorage.length; i < len; i++) {
+                var dom = document.createElement('div');
+                dom.innerHTML = selectStorage.key(i) + ' : ' + selectStorage.getItem(selectStorage.key(i));
+                logs.appendChild(dom);
+            }
+        }
+
+        function clearLogs() {
+            sessionStorage.clear();
+            localStorage.clear();
+            logs.innerHTML = '';
+        }
+
+    </script>
+</body>
+
+</html>
