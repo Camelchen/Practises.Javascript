@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>closure</title>
+    <style>
+
+
+    </style>
+
+    <script type="text/javascript" src="..\log4javascript.js"></script>
+    <script type="text/javascript">
+        var log = log4javascript.getDefaultLogger();
+
+        function init() {
+            //log.info('init');
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+
+    <div id="output">closure test</div>
+
+
+    <button id='btn-start ' onclick='init() '>Start</button>
+
+    <script type="text/javascript">
+        var fade = function(node) {
+            var level = 1;
+            var step = function() {
+                var hex = level.toString(16);
+                node.style.backgroundColor = '#FFFF' + hex + hex;
+                if (level < 15) {
+                    level += 1;
+                    setTimeout(step, 500);
+                    log.info(node.style.backgroundColor);
+                }
+            };
+            setTimeout(step, 500);
+        };
+
+        fade(document.getElementById("output"));
+
+    </script>
+</body>
+
+</html>
