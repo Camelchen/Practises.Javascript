@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>currying</title>
+    <style>
+
+
+    </style>
+
+    <script type="text/javascript" src="..\log4javascript.js"></script>
+    <script type="text/javascript">
+        var log = log4javascript.getDefaultLogger();
+
+        function init() {
+            //log.info('init');
+        }
+
+
+
+
+        function concatArray(chars, inc) {
+            return chars.map(function(char) {
+                return parseInt(char) + inc + '';
+            }).reduce(function(a, b) {
+                return a.concat(b);
+            })
+        }
+
+
+        console.log(concatArray(['1', '2'], 1));
+
+    </script>
+</head>
+
+<body>
+
+
+
+
+
+    <button id='btn-start ' onclick='init() '>Start</button>
+
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+
+</html>
